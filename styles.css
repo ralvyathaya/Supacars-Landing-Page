@@ -1,0 +1,658 @@
+@import url("https://fonts.googleapis.com/css?family=Onest:900|Inter:800,600,500,400,700");
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+}
+
+h1, h2 ,h3 {
+  font-family: "Inter", sans-serif;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+}
+
+/* Navigation bar styles */
+.container {
+  color: #fff;
+  background-color: #0E1015;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Inter", regular;
+  font-size: 16px;
+  padding: 20px 40px;
+  background-color: #0E1015;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(to bottom, #69a0e0, #4a90e2);
+  font-size: 36px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-family: "Onest", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 72px;
+}
+
+.menu li {
+  cursor: pointer;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  font-family: "Inter", sans-serif;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: transparent;
+  font-size: 16px;
+  border-radius: 12px;
+  font-family: "Inter", sans-serif;
+}
+
+.btn-primary {
+  background-color: #4a90e2;
+  color: #fff;
+  font-weight: bold;
+  padding: 18px 32px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh; /* Adjust height to make space for the search bar */
+  padding: 0 5%;
+  position: relative; /* Ensure hero section is the reference for absolute positioning */
+}
+
+.hero-text {
+  width: 50%;
+  padding-right: 40px;
+}
+
+.hero-text h1 {
+  font-size: 64px;
+  margin-bottom: 20px;
+  margin-top: -8px;
+}
+
+.verified-text {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  background-color: rgba(200, 200, 200, 0.2); /* Light grey background */
+  border-radius: 20px; /* Rounded corners */
+  padding: 8px 16px; /* Padding around the text */
+}
+
+.verified-text .fa-check-circle {
+  color: #808080; /* Grey color for the icon */
+  margin-right: 8px;
+  font-size: 16px; /* Slightly larger icon */
+}
+
+/* Hero Carousel */
+.hero-carousel {
+  width: 50%;
+  display: flex; 
+  flex-direction: column;
+  gap: 18px;
+  max-height: 80vh;
+}
+
+/* Car Card Hero Styles */
+.carousel-item {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.car-card-hero {
+  position: relative;
+  background: linear-gradient(to bottom, rgba(200, 200, 200, 0.5), rgba(200, 200, 200, 0.1));
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Car Card Styles */
+.car-card {
+  position: relative;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 400px;
+  width: calc((100% / 3) - 40px); /* Adjust width for 3x3 grid with some gap */
+  margin: 10px; /* Add margin for spacing between cards */
+  box-sizing: border-box;
+  color: black; /* Set default text color to black */
+}
+
+.car-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 16px 0;
+  max-height: 200px; /* Ensure the image fits within the card */
+}
+
+.car-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.wishlist-icon {
+  background-color: #f1efef;
+  border-radius: 18px;
+  padding: 6px;
+  margin-left: auto; /* Push the heart icon to the right */
+}
+
+.car-price {
+  color: black; /* Ensure car price text is black */
+  font-weight: bold; /* Set font weight to bold */
+  font-size: 24px; /* Set font size to 24px */
+  margin: 8px 0; /* Add margin to separate from other elements */
+  text-align: left; /* Align text to the left */
+  width: 100%; /* Ensure the text takes the full width of the container */
+}
+
+.car-location {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  color: grey; /* Set location text color to grey */
+}
+
+.car-location i {
+  margin-right: 8px; /* Add some space between the icon and the text */
+}
+
+/* Grid container for car cards */
+.car-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Set gap between car cards */
+  padding:0px 64px 100px 64px; /* Set padding from the left and right*/
+}
+
+.car-price {
+  color: black; /* Ensure car price text is black */
+  font-weight: bold; /* Set font weight to bold */
+  font-size: 24px; /* Set font size to 24px */
+}
+
+.verified-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(229, 229, 229, 0.3);
+  padding: 4px 8px;
+  border-radius: 12px;
+  border: none;
+  color: grey; /* Set verified badge text color to grey */
+}
+
+.verified-badge i {
+  color: rgba(255, 255, 255, 0.8);
+  margin-right: 4px;
+}
+
+.verified-badge p {
+  margin: 0;
+  font-size: 12px;
+  color: grey; /* Set verified badge text color to grey */
+}
+
+.verified-badge.hero p {
+  margin: 0;
+  font-size: 12px;
+  color: #fff; /* Set verified badge text color to grey */
+}
+
+.negotiable-btn {
+  background: none;
+  border: 2px solid blue; /* Set button border color to blue */
+  color: blue; /* Set button text color to blue */
+  cursor: pointer;
+  padding: 6px 12px;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  border-radius: 12px; /* Rounded border */
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+
+/* Grid container for car cards */
+.car-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Set gap between car cards */
+  padding:0px 64px 100px 64px; /* Set padding from the left and right*/
+}
+
+.car-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 16px 0;
+}
+
+.car-name {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  margin-top: auto;
+  line-height: 30px;
+}
+
+/* Stats Section */
+
+.stats {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.stats-container {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.stats-wrapper {
+  background-image: url('img/map-base-1.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 60px 20px;
+  border-radius: 20px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 72px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-number .accent {
+  color: #4a90e2;
+}
+
+.stat-text {
+  font-size: 32px;
+  font-weight: 400;
+  color: #8F9499;
+}
+
+/* Search Bar */
+.search-bar-container {
+  width: 90%;
+  position: absolute;
+  bottom: -209px; /* Adjust to position the search bar between sections */
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Ensure it appears above other sections */
+}
+
+.search-inputs {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+}
+
+.search-input {
+  width: 22%;
+  padding: 24px;
+  border: none;
+  border-right: 1px solid #ccc;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.search-input:last-child {
+  border-right: none;
+}
+
+.search-button {
+  background-color: black;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+.search-button button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-button i {
+  margin-left: 10px;
+}
+
+/* Style for "Mokas Terpopuler" text and "See all" link */
+.popular-cars {
+    background-color: white; /* Set background to white */
+    padding: 20px 0; /* Add padding to the section */
+}
+
+.popular-cars-header {
+    display: flex;
+    padding: 0 64px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Add margin to separate from car grid */
+}
+
+.popular-cars h2 {
+    font-size: 44px;
+    color: black; /* Change text color to black */
+}
+
+.popular-cars .see-all {
+    border: 2px solid gray;
+    border-radius: 64px;
+    padding: 20px 40px;
+    font-weight: bold;
+    font-size: 20px;
+    color: black; /* Change text color to black */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Target the specific <i> element with both fa-check-circle and hero classes */
+.fa-check-circle.card {
+  color: #4a90e2; /* Change the icon color to blue */
+}
+
+/* Nearby Dealers Section */
+.nearby-dealers {
+  background-color: #090B0F; /* Set background to #090B0F */
+  padding: 20px 0; /* Add padding to the section */
+}
+
+.nearby-dealers-header {
+  display: flex;
+  padding: 0 40px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Add margin to separate from other elements */
+}
+
+.nearby-dealers h2 {
+  font-size: 44px;
+  color: white; /* Change text color to white */
+}
+
+.nearby-dealers .see-all {
+  border: 2px solid gray;
+  border-radius: 64px;
+  padding: 20px 40px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white; /* Change text color to black */
+  text-decoration: none; /* Remove underline */
+}
+
+.map-image {
+  width: 100%;
+  padding: 0px 62px;
+  margin-top: 20px;
+  padding-bottom: 100px;
+}
+
+.dealer-search-bar-container {
+  position: absolute;
+  top: 522%; /* Position it at the bottom of the map image, hanging halfway */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center it horizontally */
+  width: 60%; /* Set the width to 60% */
+  z-index: 2; /* Ensure it appears above other sections */
+}
+
+.dealer-search-inputs {
+  background-color: #22242A; /* Change background color */
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.dealer-search-input {
+  width: 90%;
+  padding: 24px;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 24px; /* Change font size */
+  color: #8F9498; /* Change text color */
+  background-color: transparent; /* Ensure background is transparent */
+}
+
+.dealer-search-button {
+  background-color: blue; /* Set background color to blue */
+  padding: 12px;
+  border-radius: 50%; /* Make the background rounded */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dealer-search-button button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.dealer-search-button i {
+  margin-left: 0; /* Remove margin to center the icon */
+}
+
+/* Dealers Grid and Card Styles */
+.dealers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Set gap between dealer cards */
+  padding: 0px 64px; /* Set padding from the left */
+  margin-top: 20px;
+}
+
+.dealer-card {
+  width: calc((100% / 4) - 40px);
+  margin: 10px;
+  padding: 16px;
+  background: #090B0F;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dealer-name {
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  line-height: 30px;
+}
+
+.dealer-location {
+  color: grey;
+  margin-top: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.dealer-location .fa-location-dot {
+  margin-right: 5px; /* Add margin to the right */
+}
+
+.dealer-negotiable-btn {
+  background: none;
+  border: 2px solid #808080;
+  color: white;
+  cursor: pointer;
+  padding: 16px 48px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  border-radius: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.dealer-negotiable-btn i {
+  margin-left: 8px;
+}
+
+/* Footer */
+.footer-content {
+  background-color: #f8f8f8;
+  color: black;
+  padding: 100px 62px;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-left {
+  width: 50%;
+}
+
+.footer-left h1 {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.footer-left p {
+  margin: 20px 0;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.contact-info i {
+  margin-right: 10px;
+}
+
+.footer-right {
+  width: 50%;
+  display: flex;
+  margin-right: 200px;
+  justify-content: flex-end;
+}
+
+.footer-menu {
+  display: flex;
+}
+
+.menu-column {
+  margin-right: 40px;
+}
+
+.menu-column h3 {
+  font-weight: bold;
+}
+
+.menu-column ul {
+  font-family: 'Inter', sans-serif;
+  list-style: none;
+  padding: 0;
+}
+
+.menu-column ul li {
+  margin: 10px 0;
+}
+
